@@ -2,6 +2,7 @@
 <html>
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="UTF-8">
 <style>
 html {
   height: 100%;
@@ -115,55 +116,36 @@ body {
     }
 }
 
+.containr{
+      z-index: 10;
+      width: 100%;
+      position: relative;
+      display: flex;
+      justify-content: flex-start;
+      flex-wrap:nowrap;
+      margin: auto;      
+      -ms-overflow-style: none;
+      animation: 2.5s ease-in-out 0s 1 slideInFromLeft;
+    }
 
-#slider {
-    position: absolute;
-    transform: translateX(-100%);
-    -webkit-transform: translateX(-100%);
-}
-
-.slide-in {
-    animation: slide-in 3.5s forwards;
-    -webkit-animation: slide-in 3.5s forwards;
-}
-    
-@keyframes slide-in {
-    100% { transform: translateX(0%); }
-}
-
-@-webkit-keyframes slide-in {
-    100% { -webkit-transform: translateX(0%); }
-}
-
-#slider1 {
-    position: absolute;
-    transform: translateX(100%);
-    -webkit-transform: translateX(100%);
-}
-
-.slide-in1 {
-    animation: slide-in1 3.5s forwards;
-    -webkit-animation: slide-in1 3.5s forwards;
-}
-    
-@keyframes slide-in1 {
-    100% { transform: translateX(0%); }
-}
-
-@-webkit-keyframes slide-in1 {
-    0% { -webkit-transform: translateX(-100%); }
-}
-
+    @keyframes slideInFromLeft {
+      0% {
+        transform: translateX(-200%);
+      }
+      100% {
+        transform: translateX(0);
+      }
+    }
 
 </style>
 </head>
-<body>
+<body class="containr">
     <div class="text-box">
-        <a id="slider" href="index_mon.html" class="slide-in btn btn-white btn-        animate">Монгол</a>
+        <a id="slider" href="index_mon.html" class="slide-in btn btn-white btn-animated">Монгол</a>
     </div>
     
     <div class="text-box1">
-        <a id="slider1" href="index_eng.html" class="slide-in1 btn btn-white btn-        animate">English</a>
+        <a id="slider1" href="index_eng.html" class="slide-in1 btn btn-white btn-animated">English</a>
     </div>
 </body>
 </html>

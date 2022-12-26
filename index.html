@@ -116,15 +116,54 @@ body {
 }
 
 
+#slider {
+    position: absolute;
+    transform: translateX(-100%);
+    -webkit-transform: translateX(-100%);
+}
+
+.slide-in {
+    animation: slide-in 3.5s forwards;
+    -webkit-animation: slide-in 3.5s forwards;
+}
+    
+@keyframes slide-in {
+    100% { transform: translateX(0%); }
+}
+
+@-webkit-keyframes slide-in {
+    100% { -webkit-transform: translateX(0%); }
+}
+
+#slider1 {
+    position: absolute;
+    transform: translateX(100%);
+    -webkit-transform: translateX(100%);
+}
+
+.slide-in1 {
+    animation: slide-in1 3.5s forwards;
+    -webkit-animation: slide-in1 3.5s forwards;
+}
+    
+@keyframes slide-in1 {
+    100% { transform: translateX(0%); }
+}
+
+@-webkit-keyframes slide-in1 {
+    100% { -webkit-transform: translateX(-100%); }
+}
+
+
 </style>
 </head>
 <body>
     <div class="text-box">
-        <a href="index_mon.html" class="btn btn-white btn-        animate">Монгол</a>
+        <a id="slider" href="index_mon.html" class="slide-in btn btn-white btn-        animate">Монгол</a>
     </div>
     
     <div class="text-box1">
-        <a href="index_eng.html" class="btn btn-white btn-        animate">English</a>
+        <a id="slider1" href="index_eng.html" class="slide-in1 btn btn-white btn-        animate">English</a>
     </div>
 </body>
 </html>

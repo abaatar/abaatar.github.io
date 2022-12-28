@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <!-- Given below is Font Awesome CDN Link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <title>БИДНИЙ ТУХАЙ</title>
+
+    <style>
+
+        body, html {
+          height: 100%;
+          margin: 0;
+          font-family: Arial, Helvetica, sans-serif;
+        }
+        
+        .containerGG img{
+           width: 100%;
+           height: auto;
+           background-size: cover;
+           background-repeat: no-repeat;
+           background-position: center;
+        }
+        .prevent-select {
+  -webkit-user-select: none; /* Safari */
+  -ms-user-select: none; /* IE 10 and IE 11 */
+  user-select: none; /* Standard syntax */
+}
+        </style>
+</head>
+<body>
+    
+    <div class="container" style="position: fixed;">
+        <span class="toggleBox">
+            <span class="icon"></span>
+        </span>
+        <ul class="navItems">
+            <li>
+                <a href="index.html">
+                    <i class="fa fa-home" style="--i:1"></i>
+                    <span style="--g:1">НҮҮР ХУУДАС</span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="fa fa-user" style="--i:2"></i>
+                    <span style="--g:2">БИДНИЙ ТУХАЙ</span>
+                </a>
+            </li>
+            <li>
+                <a href="2.html">
+                    <i class="fa fa-folder" style="--i:3"></i>
+                    <span style="--g:3">ҮЙЛ АЖИЛЛАГАА</span>
+                </a>
+            </li>
+            <!--
+            <li>
+                <a href="#">
+                    <i class="fa fa-message" style="--i:4"></i>
+                    <span style="--g:4">БАЙРШИЛ</span>
+                </a>
+            </li>
+            -->
+            <li>
+                <a href="3.html">
+                    <i class="fa fa-globe" style="--i:5"></i>
+                    <span style="--g:5">ХАЯГ БАЙРШИЛ</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+
+    <div class="containerGG">
+        <img style="background-image: url(1.png);" src="1.png">
+    </div> 
+
+    <script>
+        var toggleClick = document.querySelector(".toggleBox");
+        var container = document.querySelector(".container");
+        toggleClick.addEventListener('click', ()=>{
+            toggleClick.classList.toggle('active');
+            container.classList.toggle('active');
+        })
+    </script>
+</body>
+</html>
